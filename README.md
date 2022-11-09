@@ -20,7 +20,7 @@ pipenv shell
 
 Note: This assumes you have pipenv installed on your machine already. See official pipenv documention for [installing pipenv](https://pipenv.pypa.io/en/latest/install/#installing-pipenv)
 
-You will need to set the `url` values in the fork_gitlab_repo function to the urls of the projects you would like to use as fork templates.
+You will need to set the `url` values in the fork_gitlab_repo function to the urls of the projects you would like to use as fork templates. The ones provided are not actual repos, just examples. :)
 
 Generate a Gitlab [API personal access token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html).
 
