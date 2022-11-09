@@ -7,6 +7,7 @@ To use, you will need to know:
 1. The repository you would like to fork
 2. What you would like to name the fork
 3. The namespace you would like to fork to
+4. The urls to the projects you want to use in the script
 
 ### To use:
 
@@ -17,28 +18,21 @@ pipenv install
 pipenv shell
 ```
 
-Note: This assumes you have pipenv installed on your machine already. 
+Note: This assumes you have pipenv installed on your machine already. See official pipenv documention for [installing pipenv](https://pipenv.pypa.io/en/latest/install/#installing-pipenv)
 
-Generate an [API personal access token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html) and set it in the environment variable `FORK_TOKEN` or pass it on the command line via the `--token` option: 
+You will need to set the `url` values in the fork_gitlab_repo function to the urls of the projects you would like to use as fork templates.
 
-```
-export FORK_TOKEN="YOUR TOKEN HERE"
-./fork_gitlab_repo.py
-```
+Generate a Gitlab [API personal access token](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html).
 
-```
-./fork_gitlab_repo.py --token "YOUR TOKEN HERE"
-```
-
-
-You can use the `--repo`, `--name`, and `--namespace` options or set them using the environment variables FORK_REPO, FORK_NAME, FORK_NAMESPACE to bypass the prompts:
+You can use the `--token`, `--repo`, `--name`, and `--namespace` options or set them using the environment variables FORK_TOKEN, FORK_REPO, FORK_NAME, FORK_NAMESPACE to bypass the prompts:
 
 ```
-./fork_gitlab_repo.py --repo "template" --name "template fork --namespace "lmshipp" 
+./fork_gitlab_repo.py --token "yourtokenhere" --repo "template" --name "template fork --namespace "lmshipp" 
 ```
 or
 
 ```
+export FORK_TOKEN="yourtokenhere"
 export FORK_REPO="template"
 export FORK_NAME="template fork"
 export FORK_NAMESPACE="lmshipp"
